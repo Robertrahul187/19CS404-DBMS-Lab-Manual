@@ -106,123 +106,206 @@ CREATE TABLE Table_Name (
 **Question 1**
 --
 -- Paste Question 1 here
+Create a table named Employees with the following constraints:
+
+EmployeeID should be the primary key.
+FirstName and LastName should be NOT NULL.
+Email should be unique.
+Salary should be greater than 0.
+DepartmentID should be a foreign key referencing the Departments table.
 
 ```sql
 -- Paste your SQL code below for Question 1
+CREATE TABLE Employees (
+    EmployeeID   INTEGER PRIMARY KEY,
+    FirstName    TEXT NOT NULL,
+    LastName     TEXT NOT NULL,
+    Email        TEXT UNIQUE,
+    Salary       REAL CHECK (Salary > 0),
+    DepartmentID INTEGER,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
 ```
 
 **Output:**
 
-![Output1](output.png)
+![<img width="1920" height="1080" alt="q1" src="https://github.com/user-attachments/assets/42113582-7af0-425d-9894-6b38379a2eaa" />](output.png)
 
 **Question 2**
 ---
 -- Paste Question 2 here
+Insert all products from Discontinued_products into Products.
+
+Table attributes are ProductID, ProductName, Price, Stock
 
 ```sql
 -- Paste your SQL code below for Question 2
+INSERT INTO Products (ProductID, ProductName, Price, Stock)
+SELECT ProductID, ProductName, Price, Stock
+FROM Discontinued_products;
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+![<img width="1920" height="1080" alt="q2" src="https://github.com/user-attachments/assets/2f255c59-2934-4b6d-b4a0-0003b78e5a15" />
+](output.png)
 
 **Question 3**
 ---
 -- Paste Question 3 here
-
+Create a new table named orders with the following specifications:
+ord_id as TEXT with a length of 4.
+item_id as TEXT.
+ord_date as DATE.
+ord_qty as INTEGER.
+cost as INTEGER.
+The primary key is a composite key consisting of item_id and ord_date.
+ord_id and item_id should not accept NULL
 ```sql
 -- Paste your SQL code below for Question 3
+CREATE TABLE orders (
+    ord_id TEXT NOT NULL CHECK (length(ord_id) = 4 ),
+    item_id TEXT NOT NULL ,
+    ord_date DATE ,
+    ord_qty INTEGER ,
+    cost INTEGER ,
+    PRIMARY KEY (item_id , ord_date) 
+);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![<img width="1920" height="1080" alt="q3" src="https://github.com/user-attachments/assets/d52bb924-1975-4a5f-bd94-cea888340aa6" />
+](output.png)
 
 **Question 4**
 ---
 -- Paste Question 4 here
-
+Insert a customer with CustomerID 301, Name Michael Jordan, Address 123 Maple St, City Chicago, and ZipCode 60616 into the Customers table.
 ```sql
 -- Paste your SQL code below for Question 4
+INSERT INTO Customers (CustomerID ,Name, Address, City, ZipCode)
+VALUES (301, 'Michael Jordan', '123 Maple St', 'Chicago', 60616);
 ```
 
 **Output:**
 
-![Output4](output.png)
+![<img width="767" height="163" alt="Q4" src="https://github.com/user-attachments/assets/519a4bc7-f8d8-46fd-8564-6834454bc5b7" />
+](output.png)
 
 **Question 5**
 ---
 -- Paste Question 5 here
-
+Write an SQL query to add two new columns, first_name and last_name, to the table employee. Both columns should have a data type of varchar(50).
 ```sql
 -- Paste your SQL code below for Question 5
+ALTER TABLE employee
+ADD COLUMN first_name varchar(50);
+
+ALTER TABLE employee
+ADD COLUMN last_name varchar(50);
+
 ```
 
 **Output:**
 
-![Output5](output.png)
+![<img width="863" height="256" alt="image" src="https://github.com/user-attachments/assets/24ebfb9d-8088-4345-8012-c629e9ad5feb" />
+](output.png)
 
 **Question 6**
 ---
 -- Paste Question 6 here
+Create a table named Locations with the following columns:
 
+LocationID as INTEGER
+LocationName as TEXT
+Address as TEXT
 ```sql
 -- Paste your SQL code below for Question 6
+CREATE TABLE Locations (
+    LocationID   INTEGER,
+    LocationName TEXT,
+    Address      TEXT
+);
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+![](output.png)
 
 **Question 7**
 ---
 -- Paste Question 7 here
-
+Write a SQL query to add a new column MobileNumber of type NUMBER and a new column Address of type VARCHAR(100) to the Student_details table.
 ```sql
 -- Paste your SQL code below for Question 7
+ALTER TABLE Student_details
+ADD COLUMN MobileNumber NUMBER;
+
+ALTER TABLE Student_details
+ADD COLUMN Address VARCHAR(100);
+
 ```
 
 **Output:**
 
-![Output7](output.png)
+![<img width="862" height="355" alt="image" src="https://github.com/user-attachments/assets/6897e349-1003-4606-895b-94d276450cab" />
+](output.png)
 
 **Question 8**
 ---
 -- Paste Question 8 here
-
+Create a table named Attendance with the following constraints:
+AttendanceID as INTEGER should be the primary key.
+EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID).
+AttendanceDate as DATE.
+Status as TEXT should be one of 'Present', 'Absent', 'Leave'.
 ```sql
 -- Paste your SQL code below for Question 8
+CREATE TABLE Attendance (
+    AttendanceID   INTEGER PRIMARY KEY,
+    EmployeeID     INTEGER,
+    AttendanceDate DATE,
+    Status         TEXT CHECK (Status IN ('Present', 'Absent', 'Leave')),
+    FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+);
+
 ```
 
 **Output:**
 
-![Output8](output.png)
+![<img width="693" height="254" alt="image" src="https://github.com/user-attachments/assets/ab68f132-e644-4be1-9ff7-6e9c5d7ddf45" />
+](output.png)
 
 **Question 9**
 ---
 -- Paste Question 9 here
+In the Student_details table, insert a student record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 
+RollNo      Name            Gender      Subject      MARKS
+----------  ------------    ----------  ----------   ----------
+205         Olivia Green    F
+207         Liam Smith      M           Mathematics  85
+208         Sophia Johnson  F           Science
 ```sql
 -- Paste your SQL code below for Question 9
+INSERT INTO Student_details (RollNo, Name, Gender)
+VALUES (205, 'Olivia Green', 'F');
+
+INSERT INTO Student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES (207, 'Liam Smith', 'M', 'Mathematics', 85);
+
+INSERT INTO Student_details (RollNo, Name, Gender, Subject)
+VALUES (208, 'Sophia Johnson', 'F', 'Science');
+
 ```
 
 **Output:**
 
-![Output9](output.png)
-
-**Question 10**
----
--- Paste Question 10 here
-
-```sql
--- Paste your SQL code below for Question 10
-```
-
-**Output:**
-
-![Output10](output.png)
-
+![<img width="787" height="265" alt="image" src="https://github.com/user-attachments/assets/8fdaa809-23bb-4fdf-8dbf-a00b3b7a6647" />
+](output.png)
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
