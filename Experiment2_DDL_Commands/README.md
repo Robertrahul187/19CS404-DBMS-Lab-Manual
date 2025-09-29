@@ -129,7 +129,7 @@ CREATE TABLE Employees (
 
 **Output:**
 
-![<img width="1920" height="1080" alt="q1" src="https://github.com/user-attachments/assets/42113582-7af0-425d-9894-6b38379a2eaa" />](output.png)
+<img width="1920" height="1080" alt="q1" src="https://github.com/user-attachments/assets/d433c8bb-7dc3-4611-bb35-fe1b9b90a6ff" />
 
 **Question 2**
 ---
@@ -148,8 +148,8 @@ FROM Discontinued_products;
 
 **Output:**
 
-![<img width="1920" height="1080" alt="q2" src="https://github.com/user-attachments/assets/2f255c59-2934-4b6d-b4a0-0003b78e5a15" />
-](output.png)
+<img width="1920" height="1080" alt="q2" src="https://github.com/user-attachments/assets/4bb38f46-f177-4154-a934-5cca83493d09" />
+
 
 **Question 3**
 ---
@@ -176,8 +176,8 @@ CREATE TABLE orders (
 
 **Output:**
 
-![<img width="1920" height="1080" alt="q3" src="https://github.com/user-attachments/assets/d52bb924-1975-4a5f-bd94-cea888340aa6" />
-](output.png)
+<img width="1920" height="1080" alt="q3" src="https://github.com/user-attachments/assets/0aeefe0d-33ce-4740-ad84-e88ffdb6c6e6" />
+
 
 **Question 4**
 ---
@@ -191,8 +191,8 @@ VALUES (301, 'Michael Jordan', '123 Maple St', 'Chicago', 60616);
 
 **Output:**
 
-![<img width="767" height="163" alt="Q4" src="https://github.com/user-attachments/assets/519a4bc7-f8d8-46fd-8564-6834454bc5b7" />
-](output.png)
+<img width="767" height="163" alt="Q4" src="https://github.com/user-attachments/assets/8d6541d9-5c28-4087-a7c7-b33ba3e08d42" />
+
 
 **Question 5**
 ---
@@ -210,8 +210,8 @@ ADD COLUMN last_name varchar(50);
 
 **Output:**
 
-![<img width="863" height="256" alt="image" src="https://github.com/user-attachments/assets/24ebfb9d-8088-4345-8012-c629e9ad5feb" />
-](output.png)
+<img width="863" height="256" alt="q5" src="https://github.com/user-attachments/assets/fdc3e149-7a3f-4bf9-9e2d-9aaacba9c05b" />
+
 
 **Question 6**
 ---
@@ -233,7 +233,8 @@ CREATE TABLE Locations (
 
 **Output:**
 
-![](output.png)
+<img width="891" height="319" alt="q6" src="https://github.com/user-attachments/assets/3eb7323e-4592-4759-ba64-33ad4ff61b1e" />
+
 
 **Question 7**
 ---
@@ -251,8 +252,8 @@ ADD COLUMN Address VARCHAR(100);
 
 **Output:**
 
-![<img width="862" height="355" alt="image" src="https://github.com/user-attachments/assets/6897e349-1003-4606-895b-94d276450cab" />
-](output.png)
+<img width="862" height="355" alt="q7" src="https://github.com/user-attachments/assets/a0ccb3ed-4120-4dc9-88d9-b82519728769" />
+
 
 **Question 8**
 ---
@@ -276,8 +277,7 @@ CREATE TABLE Attendance (
 
 **Output:**
 
-![<img width="693" height="254" alt="image" src="https://github.com/user-attachments/assets/ab68f132-e644-4be1-9ff7-6e9c5d7ddf45" />
-](output.png)
+<img width="693" height="254" alt="q8" src="https://github.com/user-attachments/assets/903c6dbb-b9c3-4b63-89af-88f103129baa" />
 
 **Question 9**
 ---
@@ -304,8 +304,8 @@ VALUES (208, 'Sophia Johnson', 'F', 'Science');
 
 **Output:**
 
-![<img width="787" height="265" alt="image" src="https://github.com/user-attachments/assets/8fdaa809-23bb-4fdf-8dbf-a00b3b7a6647" />
-](output.png)
+<img width="787" height="265" alt="q9" src="https://github.com/user-attachments/assets/ec5129fe-5ad8-453f-9e9d-2328af67c40f" />
+
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
